@@ -268,24 +268,7 @@ st.markdown(f"""
 
     /* ── Hero card ── */
     .hero-card {{
-        background: {DARK};
-        border-radius: 16px;
-        padding: 32px 36px;
-        margin-bottom: 28px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }}
-    .hero-card h3 {{
-        font-family: 'Playfair Display', serif !important;
-        color: {GOLD} !important;
-        font-size: 1.5rem;
-        margin: 0 0 12px 0;
-    }}
-    .hero-card p {{
-        font-family: 'Montserrat', sans-serif;
-        color: {CREAM} !important;
-        font-size: 0.93rem;
-        line-height: 1.65;
-        margin: 0;
+        display: none;
     }}
 
     /* ── Narrative box ── */
@@ -693,17 +676,17 @@ if page == "overview":
 
     # ── Hero card ─────────────────────────────────────────────
     st.markdown(f"""
-    <div class="hero-card">
-        <h3 style="color:{GOLD} !important; font-family:'Playfair Display',serif !important; font-size:1.5rem; margin:0 0 12px 0;">Tenemos un problema de 12M€.</h3>
-        <p>
-            Cada año K-Moda invierte <b style="color:{GOLD};">13.8 millones de euros</b> en publicidad,
+    <div style="background:#1A1A1A; border-radius:16px; padding:32px 36px; margin-bottom:28px; box-shadow:0 4px 20px rgba(0,0,0,0.15); border-left:5px solid #C9A84C;">
+        <div style="font-family:'Playfair Display',Georgia,serif; font-size:1.5rem; font-weight:700; color:#C9A84C; margin:0 0 14px 0;">Tenemos un problema de 12M€.</div>
+        <div style="font-family:'Montserrat',Arial,sans-serif; color:#F5F0E8; font-size:0.93rem; line-height:1.65;">
+            Cada año K-Moda invierte <span style="color:#C9A84C; font-weight:700;">13.8 millones de euros</span> en publicidad,
             pero la crisis de privacidad digital (GDPR 2018 · iOS 14 en 2021 · fin de cookies Chrome 2024)
             ha destruido el tracking individual que justificaba esa inversión.<br><br>
-            El <b>Marketing Mix Modeling</b> mide el impacto real de cada canal
-            <b>sin cookies ni píxeles</b> — usando econometría y datos agregados.
-            Con él demostramos que podemos conseguir <b style="color:{GOLD};">más con menos presupuesto</b>
+            El <strong>Marketing Mix Modeling</strong> mide el impacto real de cada canal
+            <strong>sin cookies ni píxeles</strong> — usando econometría y datos agregados.
+            Con él demostramos que podemos conseguir <span style="color:#C9A84C; font-weight:700;">más con menos presupuesto</span>
             redistribuyendo hacia los canales de mayor rendimiento.
-        </p>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
