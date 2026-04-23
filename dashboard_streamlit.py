@@ -1622,8 +1622,7 @@ elif page == "simulator":
     with c1:
         st.markdown(kpi_card("Contribución Estimada", fmt_eur(result["contrib_medios"]),
                              delta=delta_c, delta_pct=delta_p,
-                             subtitle=f"vs. Baseline 2023  ·  Total c/base orgánica: {fmt_eur(_total_ventas)}"),
-                    unsafe_allow_html=True)
+                             subtitle="vs. Baseline 2023"), unsafe_allow_html=True)
     with c2:
         st.markdown(kpi_card("mROI Simulado", f"{result['mroi_sim']:.2f}x",
                              subtitle=f"Baseline: {r_base['mroi_sim']:.2f}x"),
