@@ -694,7 +694,7 @@ if page == "overview":
     # ── Hero card ─────────────────────────────────────────────
     st.markdown(f"""
     <div class="hero-card">
-        <h3>Tenemos un problema de 12M€.</h3>
+        <h3 style="color:{GOLD} !important; font-family:'Playfair Display',serif !important; font-size:1.5rem; margin:0 0 12px 0;">Tenemos un problema de 12M€.</h3>
         <p>
             Cada año K-Moda invierte <b style="color:{GOLD};">13.8 millones de euros</b> en publicidad,
             pero la crisis de privacidad digital (GDPR 2018 · iOS 14 en 2021 · fin de cookies Chrome 2024)
@@ -1893,7 +1893,7 @@ elif page == "simulator":
         diff_word = "menos" if diff_inv < 0 else "más"
         st.markdown(f"""
         <div class="board-report">
-            <h3>INFORME EJECUTIVO — Redistribución del Presupuesto de Medios 2024</h3>
+            <h3 style="color:{DARK} !important; font-family:'Playfair Display',serif !important; padding-bottom:14px;">INFORME EJECUTIVO — Redistribución del Presupuesto de Medios 2024</h3>
             <p><b>Elaborado por:</b> Rubén Elices &nbsp;&nbsp;
             <hr style="border-color:{GOLD}; opacity:0.3;">
             <p><b>1. Situación Actual</b><br>
