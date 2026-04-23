@@ -1611,11 +1611,6 @@ elif page == "simulator":
     delta_c = result["contrib_medios"] - r_base["contrib_medios"]
     delta_p = delta_c / r_base["contrib_medios"] * 100 if r_base["contrib_medios"] > 0 else 0
 
-    # Base orgánica = lo que el modelo predice sin publicidad (intercepto anualizado)
-    _adstock_cols = [f"adstock_{c.replace(' ','_')}" for c in CANALES if f"adstock_{c.replace(' ','_')}" in df_model.columns]
-    _base_organica = (df_model["Yt"].mean() - sum(betas.get(c, 0) * df_model[c].mean() for c in _adstock_cols)) * 52
-    _total_ventas  = _base_organica + result["contrib_medios"]
-
     # ── KPIs dinámicos ────────────────────────────────────────
     st.markdown("---")
     c1, c2, c3, c4 = st.columns(4)
